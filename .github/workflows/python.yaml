@@ -26,3 +26,15 @@ jobs:
       run: python --version
     - name: print pip version
       run: pip --version
+      
+    # install pytest
+    - name: install pytest
+      run: pip install pytest
+      
+    # run tests
+    - name: run tests
+      run: pytest ../test_hello.py -v
+      
+    # run application
+    - name: run application
+      run: python hello.py World
